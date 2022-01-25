@@ -63,12 +63,12 @@ This is the original ROS1 implementation of LIO-SAM. For a ROS2 implementation s
   ```
 - [gtsam](https://github.com/borglab/gtsam/releases) (Georgia Tech Smoothing and Mapping library)
   ```
-  wget -O ~/Downloads/gtsam.zip https://github.com/borglab/gtsam/archive/4.0.2.zip
-  cd ~/Downloads/ && unzip gtsam.zip -d ~/Downloads/
-  cd ~/Downloads/gtsam-4.0.2/
+  git clone git@github.com:borglab/gtsam.git
+  cd gtsam
+  git checkout 4.0.3
   mkdir build && cd build
-  cmake -DGTSAM_BUILD_WITH_MARCH_NATIVE=OFF ..
-  sudo make install -j8
+  cmake -DGTSAM_BUILD_WITH_MARCH_NATIVE=OFF -DCMAKE_INSTALL_PREFIX=$HOME/local ..
+  make install -j7
   ```
 
 ## Install
