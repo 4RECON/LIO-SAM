@@ -69,6 +69,7 @@ This is the original ROS1 implementation of LIO-SAM. For a ROS2 implementation s
   mkdir build && cd build
   cmake -DGTSAM_BUILD_WITH_MARCH_NATIVE=OFF -DCMAKE_INSTALL_PREFIX=$HOME/local ..
   make install -j7
+  echo "export LD_LIBRARY_PATH=\$LD_LIBRARY_PATH:\$HOME/local/lib/">>$HOME/.bashrc
   ```
 
 ## Install
